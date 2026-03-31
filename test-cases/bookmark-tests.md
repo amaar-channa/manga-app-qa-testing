@@ -25,8 +25,8 @@
 3. Tap the bookmark icon
 
 **Expected Result:** Manga is saved to bookmarks list. Bookmark icon changes state (filled/highlighted).  
-**Actual Result:** [ To be filled during testing ]  
-**Status:** [ Pass / Fail ]
+**Actual Result:** Toast message appeared saying "Bookmark saved to favourites"  
+**Status:** Pass
 
 ---
 
@@ -45,8 +45,8 @@
 3. Verify the bookmarked manga appears in the list
 
 **Expected Result:** The bookmarked manga is visible in the bookmarks list with correct title and image.  
-**Actual Result:** [ To be filled during testing ]  
-**Status:** [ Pass / Fail ]
+**Actual Result:**  Bookmarked manga does appear in the saved list (even though there's a duplication bug)   
+**Status:**  Pass 
 
 ---
 
@@ -64,8 +64,8 @@
 2. Tap the bookmark icon again
 
 **Expected Result:** The manga is either removed from bookmarks (toggle behavior) OR a message appears saying it is already bookmarked. No duplicate entry is created.  
-**Actual Result:** [ To be filled during testing ]  
-**Status:** [ Pass / Fail ]
+**Actual Result:** Tapping BOOKMARK on an already bookmarked manga adds another duplicate entry instead of showing "already bookmarked" or toggling it off. No duplicate prevention exists.  
+**Status:** Fail
 
 ---
 
@@ -84,8 +84,8 @@
 3. Tap the remove/unbookmark option
 
 **Expected Result:** Manga is immediately removed from the bookmarks list. List updates without requiring a refresh.  
-**Actual Result:** [ To be filled during testing ]  
-**Status:** [ Pass / Fail ]
+**Actual Result:** Long pressing and swiping on bookmarked manga in favourites list does nothing. No remove or delete option appears.  
+**Status:** Fail
 
 ---
 
@@ -105,8 +105,8 @@
 4. Navigate to Bookmarks section
 
 **Expected Result:** All previously bookmarked manga are still present in the list after restart.  
-**Actual Result:** [ To be filled during testing ]  
-**Status:** [ Pass / Fail ]
+**Actual Result:** Bookmarks remained in the favourites list after fully closing and reopening the app. Data persists correctly.  
+**Status:** Pass
 
 ---
 
@@ -125,8 +125,8 @@
 3. Tap the bookmark icon
 
 **Expected Result:** Bookmark is saved locally and a success message is shown. App does not crash.  
-**Actual Result:** [ To be filled during testing ]  
-**Status:** [ Pass / Fail ]
+**Actual Result:** Bookmark was successfully saved while offline. Toast message appeared confirming bookmark saved. Manga appeared in favourites list. App did not crash.  
+**Status:** Pass
 
 ---
 
@@ -144,8 +144,8 @@
 2. Navigate to the Bookmarks section
 
 **Expected Result:** A message such as "No bookmarks yet" or similar empty state is displayed. Screen does not show a blank or broken UI.  
-**Actual Result:** [ To be filled during testing ]  
-**Status:** [ Pass / Fail ]
+**Actual Result:** Delete Data feature not found in app  
+**Status:** Blocked
 
 ---
 
@@ -165,8 +165,8 @@
 4. Navigate back to the Bookmarks section
 
 **Expected Result:** Bookmarks list is completely empty after deleting all data.  
-**Actual Result:** [ To be filled during testing ]  
-**Status:** [ Pass / Fail ]
+**Actual Result:** Delete Data feature not found in app  
+**Status:** Blocked
 
 ---
 
@@ -174,11 +174,11 @@
 
 | Test Case ID | Description | Status |
 |---|---|---|
-| TC-BM-001 | Bookmark a single manga | Pending |
-| TC-BM-002 | Bookmarked manga appears in saved list | Pending |
-| TC-BM-003 | Bookmark same manga twice | Pending |
-| TC-BM-004 | Remove a bookmark | Pending |
-| TC-BM-005 | Bookmarks persist after app restart | Pending |
-| TC-BM-006 | Bookmark with no internet | Pending |
-| TC-BM-007 | Bookmark list empty state | Pending |
-| TC-BM-008 | Bookmark count after delete all data | Pending |
+| TC-BM-001 | Bookmark a single manga | Pass |
+| TC-BM-002 | Bookmarked manga appears in saved list | Pass |
+| TC-BM-003 | Bookmark same manga twice | Fail |
+| TC-BM-004 | Remove a bookmark | Fail |
+| TC-BM-005 | Bookmarks persist after app restart | Pass |
+| TC-BM-006 | Bookmark with no internet | Pass |
+| TC-BM-007 | Bookmark list empty state | Blocked |
+| TC-BM-008 | Bookmark count after delete all data | Blocked |
