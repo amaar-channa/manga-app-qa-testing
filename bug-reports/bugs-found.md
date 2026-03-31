@@ -46,20 +46,23 @@ Each bug found during testing is documented below using the following format:
 | Field | Details |
 |---|---|
 | **Bug ID** | BUG-001 |
-| **Title** | [ To be filled after testing ] |
-| **Feature** | [ To be filled after testing ] |
-| **Severity** | [ To be filled after testing ] |
-| **Priority** | [ To be filled after testing ] |
+| **Title** | Bookmarking same manga multiple times creates duplicate entries |
+| **Feature** | Bookmark |
+| **Severity** | High |
+| **Priority** | High |
 | **Status** | New |
 
 **Steps to Reproduce:**
-1. [ To be filled after testing ]
-2. 
-3. 
+1. Open any manga
+2. Tap BOOKMARK
+3. Go back
+4. Open same manga again
+5. Tap BOOKMARK again
+6. Check favourites list
 
-**Expected Result:** [ To be filled after testing ]  
-**Actual Result:** [ To be filled after testing ]  
-**Screenshot:** [ Attach screenshot if available ]
+**Expected Result:** App prevents duplicate — shows message or toggles bookmark off  
+**Actual Result:** Same manga added again as a new duplicate entry every time BOOKMARK is tapped  
+**Screenshot:** 
 
 ---
 
@@ -67,20 +70,20 @@ Each bug found during testing is documented below using the following format:
 | Field | Details |
 |---|---|
 | **Bug ID** | BUG-002 |
-| **Title** | [ To be filled after testing ] |
-| **Feature** | [ To be filled after testing ] |
-| **Severity** | [ To be filled after testing ] |
-| **Priority** | [ To be filled after testing ] |
+| **Title** | No way to remove individual bookmarks from favourites list |
+| **Feature** | Bookmark |
+| **Severity** | High |
+| **Priority** | High |
 | **Status** | New |
 
 **Steps to Reproduce:**
-1. [ To be filled after testing ]
-2. 
-3. 
+1. Bookmark any manga
+2. Navigate to favourites screen
+3. Long press or swipe on any bookmarked manga
 
-**Expected Result:** [ To be filled after testing ]  
-**Actual Result:** [ To be filled after testing ]  
-**Screenshot:** [ Attach screenshot if available ]
+**Expected Result:** A remove or delete option appears  
+**Actual Result:** Nothing happens — no way to remove individual bookmarks  
+**Screenshot:** 
 
 ---
 
@@ -88,20 +91,20 @@ Each bug found during testing is documented below using the following format:
 | Field | Details |
 |---|---|
 | **Bug ID** | BUG-003 |
-| **Title** | [ To be filled after testing ] |
-| **Feature** | [ To be filled after testing ] |
-| **Severity** | [ To be filled after testing ] |
-| **Priority** | [ To be filled after testing ] |
+| **Title** | Network error message is technical and not user friendly |
+| **Feature** | General App |
+| **Severity** | Medium |
+| **Priority** | Medium |
 | **Status** | New |
 
 **Steps to Reproduce:**
-1. [ To be filled after testing ]
-2. 
-3. 
+1. Turn off internet connection
+2. Open the app
+3. Wait for error message to appear
 
-**Expected Result:** [ To be filled after testing ]  
-**Actual Result:** [ To be filled after testing ]  
-**Screenshot:** [ Attach screenshot if available ]
+**Expected Result:** A friendly message like "No internet connection. Please check your network and try again."  
+**Actual Result:** Technical error shown: "Failed to fetch manga: Unable to resolve host 'mangaverse-api.p.rapidapi.com'"  
+**Screenshot:** 
 
 ---
 
@@ -109,20 +112,20 @@ Each bug found during testing is documented below using the following format:
 | Field | Details |
 |---|---|
 | **Bug ID** | BUG-004 |
-| **Title** | [ To be filled after testing ] |
-| **Feature** | [ To be filled after testing ] |
-| **Severity** | [ To be filled after testing ] |
-| **Priority** | [ To be filled after testing ] |
+| **Title** | Delete Data feature missing from Settings screen |
+| **Feature** | General App / Delete Data |
+| **Severity** | High |
+| **Priority** | High |
 | **Status** | New |
 
 **Steps to Reproduce:**
-1. [ To be filled after testing ]
-2. 
-3. 
+1. Open app
+2. Tap Settings
+3. Look for Delete Data option
 
-**Expected Result:** [ To be filled after testing ]  
-**Actual Result:** [ To be filled after testing ]  
-**Screenshot:** [ Attach screenshot if available ]
+**Expected Result:** Delete Data button exists in settings  
+**Actual Result:** No Delete Data option found anywhere in settings screen  
+**Screenshot:** 
 
 ---
 
@@ -130,20 +133,21 @@ Each bug found during testing is documented below using the following format:
 | Field | Details |
 |---|---|
 | **Bug ID** | BUG-005 |
-| **Title** | [ To be filled after testing ] |
-| **Feature** | [ To be filled after testing ] |
-| **Severity** | [ To be filled after testing ] |
-| **Priority** | [ To be filled after testing ] |
+| **Title** | Manga cover images disappear when Dark Mode is enabled |
+| **Feature** | Dark Mode |
+| **Severity** | High |
+| **Priority** | High |
 | **Status** | New |
 
 **Steps to Reproduce:**
-1. [ To be filled after testing ]
-2. 
-3. 
+1. Open app
+2. Go to Settings
+3. Enable Dark Mode
+4. Go to home screen
 
-**Expected Result:** [ To be filled after testing ]  
-**Actual Result:** [ To be filled after testing ]  
-**Screenshot:** [ Attach screenshot if available ]
+**Expected Result:** Manga cover images remain visible  
+**Actual Result:** All manga cover images disappear, only titles show, blank white boxes appear  
+**Screenshot:** 
 
 ---
 
@@ -151,11 +155,11 @@ Each bug found during testing is documented below using the following format:
 
 | Bug ID | Title | Feature | Severity | Status |
 |---|---|---|---|---|
-| BUG-001 | TBD | TBD | TBD | New |
-| BUG-002 | TBD | TBD | TBD | New |
-| BUG-003 | TBD | TBD | TBD | New |
-| BUG-004 | TBD | TBD | TBD | New |
-| BUG-005 | TBD | TBD | TBD | New |
+| BUG-001 | Duplicate bookmarks created | Bookmark | High | New |
+| BUG-002 | No way to remove individual bookmarks | Bookmark | High | New |
+| BUG-003 | Technical network error message | General App | Medium | New |
+| BUG-004 | Delete Data feature missing | General App | High | New |
+| BUG-005 | Manga images disappear in Dark Mode | Dark Mode | High | New |
 
 ---
 
