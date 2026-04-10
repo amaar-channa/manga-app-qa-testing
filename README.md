@@ -76,11 +76,11 @@ and API endpoint verification.
 |---|---|---|---|---|---|
 | Bookmark Feature | 8 | 4 | 2 | 2 | 4 (BUG-001 to BUG-004) |
 | Dark Mode | 6 | 5 | 1 | 0 | 4 (BUG-005 to BUG-008) |
-| Search by Genre | 6 | TBD | TBD | TBD | TBD |
+| Search by Genre | 6 | 3 | 3 | 0 | 1 (BUG-012) |
 | Latest Updates | 5 | TBD | TBD | TBD | TBD |
 | General App / Navigation | 8 | TBD | TBD | TBD | TBD |
 | API Testing (Postman) | 5 | TBD | TBD | TBD | TBD |
-| **Total** | **38** | **9** | **3** | **2** | **11** |
+| **Total** | **38** | **12** | **6** | **2** | **12** |
 
 ---
 
@@ -112,11 +112,11 @@ manga-app-qa-testing/
 - [x] Test plan written
 - [x] Bookmark test cases complete — 8 cases, 4 pass / 2 fail / 2 blocked
 - [x] Dark mode test cases complete — 6 cases, 5 pass / 1 fail
-- [ ] Genre search test cases complete
+- [x] Genre search test cases complete — 6 cases, 3 pass / 3 fail
 - [ ] Latest updates test cases complete
 - [ ] General app test cases complete
 - [ ] API tests complete in Postman
-- [x] Bug reports documented — 11 bugs (BUG-001 to BUG-011)
+- [x] Bug reports documented — 12 bugs (BUG-001 to BUG-012)
 - [ ] Jira board set up
 - [ ] ISTQB Foundation — in progress
 
@@ -145,6 +145,12 @@ manga-app-qa-testing/
 - Test with no internet — verify error handling
 - Verify API response matches displayed results
 
+### Latest Updates
+- Verify latest manga loads on home screen
+- Tap a manga from latest updates — verify correct detail screen opens
+- Test with no internet — verify error handling
+- Verify loading state is visible while fetching
+
 ### API Testing
 - Verify MangaVerse API returns 200 OK
 - Test invalid genre parameter — check error response
@@ -159,10 +165,10 @@ manga-app-qa-testing/
 | Severity | Count | Bug IDs |
 |---|---|---|
 | Critical | 1 | BUG-009 |
-| High | 6 | BUG-001, BUG-002, BUG-004, BUG-005, BUG-007, BUG-010 |
+| High | 7 | BUG-001, BUG-002, BUG-004, BUG-005, BUG-007, BUG-010, BUG-012 |
 | Medium | 2 | BUG-003, BUG-006 |
 | Low | 2 | BUG-008, BUG-011 |
-| **Total** | **11** | |
+| **Total** | **12** | |
 
 ---
 
