@@ -305,6 +305,28 @@ Each bug found during testing is documented below using the following format:
 
 ---
 
+### BUG-013
+| Field | Details |
+|---|---|
+| **Bug ID** | BUG-013 |
+| **Title** | Manga detail screen intermittently shows Total Chapters: 0 |
+| **Feature** | Latest Updates / Manga Detail |
+| **Severity** | Low |
+| **Priority** | Low |
+| **Status** | New |
+
+**Steps to Reproduce:**
+1. Tap LATEST MANGA on home screen
+2. Tap any manga from the list
+3. Observe the Total Chapters field on the detail screen
+
+**Expected Result:** Total Chapters displays the correct number of chapters available for the selected manga  
+**Actual Result:** Some manga show "Total Chapters: 0" despite having chapters available. Confirmed on Re:Zero kara Hajimeru and Hell Warden Higuma during testing. Other manga in the same session displayed correct chapter counts.  
+**Notes:** Issue is intermittent. Likely caused by inconsistent chapter count data in the MangaVerse API response for certain manga entries. Could not reproduce consistently across all manga. Documented as observed.  
+**Screenshot:** screenshots/BUG-013.png
+
+---
+
 ## Bug Summary
 
 | Bug ID | Title | Feature | Severity | Status |
@@ -321,7 +343,7 @@ Each bug found during testing is documented below using the following format:
 | BUG-010 | No error message when chapter fails to load | Error Handling | High | New |
 | BUG-011 | Manga title truncated on detail screen | UI | Low | New |
 | BUG-012 | Genre search bar does not filter by genre | Search by Genre | High | New |
-
+| BUG-013 | Total Chapters shows 0 on detail screen (intermittent) | Latest Updates | Low | New |
 ---
 
 > Screenshots stored in /screenshots folder and linked per bug.  
