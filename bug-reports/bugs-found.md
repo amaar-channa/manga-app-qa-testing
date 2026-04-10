@@ -105,6 +105,7 @@ Each bug found during testing is documented below using the following format:
 
 **Expected Result:** A friendly message like "No internet connection. Please check your network and try again."  
 **Actual Result:** Technical error shown: "Failed to fetch manga: Unable to resolve host 'mangaverse-api.p.rapidapi.com'"  
+**Notes:** Same technical error also appears when genre search is attempted with no internet. The genre search screen itself shows no error message at all — screen stays blank silently.  
 **Screenshot:** screenshots/BUG-003.png
 
 ---
@@ -233,14 +234,7 @@ Each bug found during testing is documented below using the following format:
 
 **Expected Result:** Manga pages load and display in the reader for reading  
 **Actual Result:** Reader screen is completely blank — only gradient background, START AUTO SCROLL button, and back button visible. No manga pages load.  
-**Notes:** Reading feature was confirmed working during development between 
-May–August 2024 (last capstone commit August 9, 2024, verified via recorded 
-demo). This is a regression caused by the MangaVerse API returning 
-`{"code":404,"error_message":"chapter not found"}` for chapter IDs no longer 
-available. API content availability changes over time and is outside app 
-control. Root cause confirmed via logcat analysis. The underlying code defect 
-is the absence of error handling — the app should detect the 404 and display 
-a meaningful message rather than a blank screen (see BUG-010).  
+**Notes:** Reading feature was confirmed working during development between May–August 2024 (last capstone commit August 9, 2024, verified via recorded demo). This is a regression caused by the MangaVerse API returning `{"code":404,"error_message":"chapter not found"}` for chapter IDs no longer available. API content availability changes over time and is outside app control. Root cause confirmed via logcat analysis. The underlying code defect is the absence of error handling — the app should detect the 404 and display a meaningful message rather than a blank screen (see BUG-010).  
 **Screenshot:** screenshots/BUG-009.png
 
 ---
@@ -288,6 +282,29 @@ a meaningful message rather than a blank screen (see BUG-010).
 
 ---
 
+### BUG-012
+| Field | Details |
+|---|---|
+| **Bug ID** | BUG-012 |
+| **Title** | Genre search bar does not filter results by entered genre |
+| **Feature** | Search by Genre |
+| **Severity** | High |
+| **Priority** | High |
+| **Status** | New |
+
+**Steps to Reproduce:**
+1. Tap the search bar on the home screen
+2. Type "fantasy" — note the results
+3. Clear and type "action" — note the results
+4. Clear and type "harem" — compare results
+
+**Expected Result:** Each genre search returns a distinct set of manga relevant to that specific genre  
+**Actual Result:** Results are near-identical across all genre searches. The same manga titles appear regardless of which genre is typed. The search bar input does not change the API query.  
+**Notes:** Confirmed via logcat analysis — API call always uses `genres=Harem%2CFantasy%2CAction` regardless of search bar input. The genre search text field appears to be a UI element that is not properly connected to the API filtering logic. Tested with Fantasy, Action, Harem, Adventure, Sci-Fi — all returned overlapping results.  
+**Screenshot:** screenshots/BUG-012.png
+
+---
+
 ## Bug Summary
 
 | Bug ID | Title | Feature | Severity | Status |
@@ -303,6 +320,7 @@ a meaningful message rather than a blank screen (see BUG-010).
 | BUG-009 | Manga reader shows blank screen on 404 | Read Feature | Critical | New |
 | BUG-010 | No error message when chapter fails to load | Error Handling | High | New |
 | BUG-011 | Manga title truncated on detail screen | UI | Low | New |
+| BUG-012 | Genre search bar does not filter by genre | Search by Genre | High | New |
 
 ---
 
