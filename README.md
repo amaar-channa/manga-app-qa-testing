@@ -26,7 +26,19 @@ browse, and discover manga comics on the go.
 **Original Repository:** [nishu1998/Capstone_Project](https://github.com/nishu1998/Capstone_Project)  
 **Platform:** Android  
 **Language:** Kotlin  
-**API Source:** MangaVerse API & Best Manga Anime Wallpapers API (RapidAPI)
+**API Source:** MangaVerse API & Best Manga Anime Wallpapers API (RapidAPI)  
+**App Built:** May 17 – August 9, 2024  
+**QA Testing:** March–April 2026
+
+---
+
+## About the App — Important Note
+
+The MangaVerse API free tier has content availability limitations. Some manga
+chapter IDs tested return 404 responses at time of QA testing. The reading
+feature was confirmed working during active development (May–August 2024,
+verified via recorded demo). Test results reflect current API state as of
+March–April 2026.
 
 ---
 
@@ -60,15 +72,15 @@ and API endpoint verification.
 
 ## Test Coverage Summary
 
-| Area | Test Cases | Bugs Found |
-|---|---|---|
-| Bookmark Feature | 8 | TBD |
-| Dark Mode | 6 | TBD |
-| Search by Genre | 6 | TBD |
-| Latest Updates | 5 | TBD |
-| General App / Navigation | 8 | TBD |
-| API Testing (Postman) | 5 | TBD |
-| **Total** | **38** | **TBD** |
+| Area | Test Cases | Pass | Fail | Blocked | Bugs Found |
+|---|---|---|---|---|---|
+| Bookmark Feature | 8 | 4 | 2 | 2 | 4 (BUG-001 to BUG-004) |
+| Dark Mode | 6 | 5 | 1 | 0 | 4 (BUG-005 to BUG-008) |
+| Search by Genre | 6 | TBD | TBD | TBD | TBD |
+| Latest Updates | 5 | TBD | TBD | TBD | TBD |
+| General App / Navigation | 8 | TBD | TBD | TBD | TBD |
+| API Testing (Postman) | 5 | TBD | TBD | TBD | TBD |
+| **Total** | **38** | **9** | **3** | **2** | **11** |
 
 ---
 
@@ -97,14 +109,14 @@ manga-app-qa-testing/
 
 ## Current Progress
 
-- [ ] Test plan written
-- [ ] Bookmark test cases complete
-- [ ] Dark mode test cases complete
+- [x] Test plan written
+- [x] Bookmark test cases complete — 8 cases, 4 pass / 2 fail / 2 blocked
+- [x] Dark mode test cases complete — 6 cases, 5 pass / 1 fail
 - [ ] Genre search test cases complete
 - [ ] Latest updates test cases complete
 - [ ] General app test cases complete
 - [ ] API tests complete in Postman
-- [ ] Bug reports documented
+- [x] Bug reports documented — 11 bugs (BUG-001 to BUG-011)
 - [ ] Jira board set up
 - [ ] ISTQB Foundation — in progress
 
@@ -124,6 +136,8 @@ manga-app-qa-testing/
 - Toggle off — verify complete revert
 - Verify dark mode preference saves after restart
 - Check readability of manga images in dark mode
+- Verify splash screen reflects dark mode setting
+- Toggle dark mode while reading a chapter
 
 ### Search by Genre
 - Select a valid genre — verify relevant results load
@@ -137,6 +151,18 @@ manga-app-qa-testing/
 - Verify wallpaper API response structure
 - Check response time baseline
 - Verify data displayed in app matches API response
+
+---
+
+## Bugs by Severity
+
+| Severity | Count | Bug IDs |
+|---|---|---|
+| Critical | 1 | BUG-009 |
+| High | 6 | BUG-001, BUG-002, BUG-004, BUG-005, BUG-007, BUG-010 |
+| Medium | 2 | BUG-003, BUG-006 |
+| Low | 2 | BUG-008, BUG-011 |
+| **Total** | **11** | |
 
 ---
 
