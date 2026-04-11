@@ -78,11 +78,11 @@ and API endpoint verification.
 | Dark Mode | 6 | 5 | 1 | 0 | 4 (BUG-005 to BUG-008) |
 | Search by Genre | 6 | 3 | 3 | 0 | 1 (BUG-012) |
 | Latest Updates | 5 | 4 | 0 | 1 | 1 (BUG-013) |
-| General App / Navigation | 8 | 6 | 2 | 0 | 4 (BUG-003, BUG-004, BUG-014, BUG-015) |
-| API Testing (Postman) | 5 | TBD | TBD | TBD | TBD |
-| **Total** | **38** | **22** | **8** | **3** | **15** |
+| General App / Navigation | 8 | 6 | 2 | 0 | 3 (BUG-003, BUG-004, BUG-014) |
+| API Testing (Postman) | 7 | TBD | TBD | TBD | TBD |
+| **Total** | **40** | **22** | **8** | **3** | **14** |
 
-> Note: BUG-003 and BUG-004 were originally found during feature testing but are reflected in General App counts. BUG-009 and BUG-010 relate to the Read feature and are not attributed to a separate test section.
+> Note: BUG-003 and BUG-004 were originally found during feature testing and are also reflected in the General App section. BUG-009 and BUG-010 relate to the Read feature and are not attributed to a separate test section.
 
 ---
 
@@ -118,7 +118,7 @@ manga-app-qa-testing/
 - [x] Latest updates test cases complete — 5 cases, 4 pass / 1 deferred
 - [x] General app test cases complete — 8 cases, 6 pass / 2 fail
 - [ ] API tests complete in Postman
-- [x] Bug reports documented — 15 bugs (BUG-001 to BUG-015)
+- [x] Bug reports documented — 14 bugs (BUG-001 to BUG-014)
 - [ ] Jira board set up
 - [ ] ISTQB Foundation — in progress
 
@@ -163,10 +163,12 @@ manga-app-qa-testing/
 
 ### API Testing
 - Verify MangaVerse API returns 200 OK
+- Test genre filter parameter — verify filtered results
 - Test invalid genre parameter — check error response
-- Verify wallpaper API response structure
-- Check response time baseline
-- Verify data displayed in app matches API response
+- Verify API response time baseline
+- Verify wallpaper API returns valid data
+- Test invalid API key — verify 401/403 response
+- Verify app data matches API response
 
 ---
 
@@ -176,9 +178,9 @@ manga-app-qa-testing/
 |---|---|---|
 | Critical | 1 | BUG-009 |
 | High | 7 | BUG-001, BUG-002, BUG-004, BUG-005, BUG-007, BUG-010, BUG-012 |
-| Medium | 4 | BUG-003, BUG-006, BUG-014, BUG-015 |
+| Medium | 3 | BUG-003, BUG-006, BUG-014 |
 | Low | 3 | BUG-008, BUG-011, BUG-013 |
-| **Total** | **15** | |
+| **Total** | **14** | |
 
 ---
 
