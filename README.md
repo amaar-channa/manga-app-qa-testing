@@ -77,10 +77,12 @@ and API endpoint verification.
 | Bookmark Feature | 8 | 4 | 2 | 2 | 4 (BUG-001 to BUG-004) |
 | Dark Mode | 6 | 5 | 1 | 0 | 4 (BUG-005 to BUG-008) |
 | Search by Genre | 6 | 3 | 3 | 0 | 1 (BUG-012) |
-| Latest Updates | 5 | 4 | 0 | 0 | 1 (BUG-013) |
-| General App / Navigation | 8 | TBD | TBD | TBD | TBD |
+| Latest Updates | 5 | 4 | 0 | 1 | 1 (BUG-013) |
+| General App / Navigation | 8 | 6 | 2 | 0 | 4 (BUG-003, BUG-004, BUG-014, BUG-015) |
 | API Testing (Postman) | 5 | TBD | TBD | TBD | TBD |
-| **Total** | **38** | **16** | **6** | **2** | **13** |
+| **Total** | **38** | **22** | **8** | **3** | **15** |
+
+> Note: BUG-003 and BUG-004 were originally found during feature testing but are reflected in General App counts. BUG-009 and BUG-010 relate to the Read feature and are not attributed to a separate test section.
 
 ---
 
@@ -114,9 +116,9 @@ manga-app-qa-testing/
 - [x] Dark mode test cases complete — 6 cases, 5 pass / 1 fail
 - [x] Genre search test cases complete — 6 cases, 3 pass / 3 fail
 - [x] Latest updates test cases complete — 5 cases, 4 pass / 1 deferred
-- [ ] General app test cases complete
+- [x] General app test cases complete — 8 cases, 6 pass / 2 fail
 - [ ] API tests complete in Postman
-- [x] Bug reports documented — 13 bugs (BUG-001 to BUG-013)
+- [x] Bug reports documented — 15 bugs (BUG-001 to BUG-015)
 - [ ] Jira board set up
 - [ ] ISTQB Foundation — in progress
 
@@ -151,6 +153,14 @@ manga-app-qa-testing/
 - Test with no internet — verify error handling
 - Verify loading state is visible while fetching
 
+### General App / Navigation
+- Verify app launches within acceptable time
+- Test back button navigation across all screens
+- Verify app handles slow and no internet gracefully
+- Test tutorial on first launch
+- Verify UI consistency across different screen sizes
+- Test dark mode and bookmark features in combination
+
 ### API Testing
 - Verify MangaVerse API returns 200 OK
 - Test invalid genre parameter — check error response
@@ -166,9 +176,9 @@ manga-app-qa-testing/
 |---|---|---|
 | Critical | 1 | BUG-009 |
 | High | 7 | BUG-001, BUG-002, BUG-004, BUG-005, BUG-007, BUG-010, BUG-012 |
-| Medium | 2 | BUG-003, BUG-006 |
+| Medium | 4 | BUG-003, BUG-006, BUG-014, BUG-015 |
 | Low | 3 | BUG-008, BUG-011, BUG-013 |
-| **Total** | **13** | |
+| **Total** | **15** | |
 
 ---
 
