@@ -327,6 +327,49 @@ Each bug found during testing is documented below using the following format:
 
 ---
 
+### BUG-014
+| Field | Details |
+|---|---|
+| **Bug ID** | BUG-014 |
+| **Title** | App takes approximately 10 seconds to fully load on launch |
+| **Feature** | General / Performance |
+| **Severity** | Medium |
+| **Priority** | Medium |
+| **Status** | New |
+
+**Steps to Reproduce:**
+1. Fully close the app
+2. Tap the app icon to launch
+3. Time from tap until home screen manga cards are fully visible
+
+**Expected Result:** App fully loads within 3 seconds  
+**Actual Result:** App takes approximately 10 seconds to fully load. Splash screen plays but home screen manga cards take significant time to appear. Likely caused by API call on startup fetching manga data before rendering.  
+**Screenshot:** screenshots/BUG-014.png
+
+---
+
+### BUG-015
+| Field | Details |
+|---|---|
+| **Bug ID** | BUG-015 |
+| **Title** | Background image missing after clearing app data — white background shown |
+| **Feature** | General App / UI |
+| **Severity** | Medium |
+| **Priority** | Medium |
+| **Status** | New |
+
+**Steps to Reproduce:**
+1. Go to Android Settings → Apps → MangaMania → Storage → Clear Data
+2. Relaunch the app
+3. Observe all screens
+
+**Expected Result:** App displays the correct gradient background image across all screens  
+**Actual Result:** Background image missing on all screens — plain white background shown instead. Reproduced on both Medium Phone API 34 and Pixel 9 Pro XL emulators.  
+**Notes:** Background image appears to be loaded from a resource that is not properly restored after app data is cleared. Likely stored locally and lost when app data is wiped.  
+**Screenshot:** screenshots/BUG-015.png
+
+---
+
 ## Bug Summary
 
 | Bug ID | Title | Feature | Severity | Status |
@@ -344,6 +387,9 @@ Each bug found during testing is documented below using the following format:
 | BUG-011 | Manga title truncated on detail screen | UI | Low | New |
 | BUG-012 | Genre search bar does not filter by genre | Search by Genre | High | New |
 | BUG-013 | Total Chapters shows 0 on detail screen (intermittent) | Latest Updates | Low | New |
+| BUG-014 | App takes ~10 seconds to fully load on launch | General / Performance | Medium | New |
+| BUG-015 | Background image missing after clearing app data | General App / UI | Medium | New |
+
 ---
 
 > Screenshots stored in /screenshots folder and linked per bug.  
