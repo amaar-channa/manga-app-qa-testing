@@ -79,7 +79,7 @@ and API endpoint verification.
 | Search by Genre | 6 | 3 | 3 | 0 | 1 (BUG-012) |
 | Latest Updates | 5 | 4 | 0 | 1 | 1 (BUG-013) |
 | General App / Navigation | 8 | 6 | 2 | 0 | 3 (BUG-003, BUG-004, BUG-014) |
-| API Testing (Postman) | 7 | TBD | TBD | TBD | TBD |
+| API Testing (Postman) | 7 | 4 | 1 | 2 | 0 |
 | **Total** | **40** | **22** | **8** | **3** | **14** |
 
 > Note: BUG-003 and BUG-004 were originally found during feature testing and are also reflected in the General App section. BUG-009 and BUG-010 relate to the Read feature and are not attributed to a separate test section.
@@ -117,9 +117,9 @@ manga-app-qa-testing/
 - [x] Genre search test cases complete — 6 cases, 3 pass / 3 fail
 - [x] Latest updates test cases complete — 5 cases, 4 pass / 1 deferred
 - [x] General app test cases complete — 8 cases, 6 pass / 2 fail
-- [ ] API tests complete in Postman
+- [x] API tests complete in Postman — 7 cases (4 pass / 1 fail / 2 partial pass)
 - [x] Bug reports documented — 14 bugs (BUG-001 to BUG-014)
-- [ ] Jira board set up
+- [x] Jira board set up — 14 bugs logged (KAN-1 to KAN-14)
 - [ ] ISTQB Foundation — in progress
 
 ---
