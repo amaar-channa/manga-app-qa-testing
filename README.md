@@ -1,65 +1,64 @@
 # manga-app-qa-testing
 Manual QA testing documentation, test cases and bug reports for MangaMania Android app
-
+ 
 # MangaMania — QA Test Documentation
-
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+ 
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![Platform](https://img.shields.io/badge/Platform-Android-green)
 ![Language](https://img.shields.io/badge/Language-Kotlin-purple)
-
+ 
 ## About This Repository
-
+ 
 This repository contains manual QA testing documentation for **MangaMania**,
 an Android manga reading application built by a team of 4 developers 
 as a Capstone Project at Fanshawe College.
-
+ 
 It includes a full test plan, manual test cases, bug reports, 
 and API testing performed using Postman.
-
+ 
 ---
-
+ 
 ## About the App
-
+ 
 MangaMania is an Android app that allows manga enthusiasts to read, 
 browse, and discover manga comics on the go.
-
+ 
 **Original Repository:** [nishu1998/Capstone_Project](https://github.com/nishu1998/Capstone_Project)  
 **Platform:** Android  
 **Language:** Kotlin  
 **API Source:** MangaVerse API & Best Manga Anime Wallpapers API (RapidAPI)  
 **App Built:** May 17 – August 9, 2024  
 **QA Testing:** March–April 2026
-
+ 
 ---
-
+ 
 ## About the App — Important Note
-
+ 
 The MangaVerse API free tier has content availability limitations. Some manga
 chapter IDs tested return 404 responses at time of QA testing. The reading
 feature was confirmed working during active development (May–August 2024,
 verified via recorded demo). Test results reflect current API state as of
 March–April 2026.
-
+ 
 ---
-
+ 
 ## My Role
-
+ 
 **Developer:** Amaar Yasir Channa  
 **Features I Built:**
 - Bookmark — save and manage favourite manga
 - Dark Mode — toggle for low light reading
 - Latest Updates — display newest manga releases
 - Search by Genre — filter manga by genre selection
-
 **QA Role:**  
-Designed and executed the full test plan for the application, 
-including manual test cases, negative testing, edge case testing, 
-and API endpoint verification.
-
+Executed the full test plan: ran all test cases (manual, negative and edge case testing), 
+performed API endpoint testing in Postman, and found, root-caused and logged the defects in Jira. 
+Test cases and the test plan were drafted with AI assistance.
+ 
 ---
-
+ 
 ## Tools Used
-
+ 
 | Tool | Purpose |
 |---|---|
 | Jira | Bug tracking and test management |
@@ -67,12 +66,12 @@ and API endpoint verification.
 | Android Studio Emulator | Test execution environment |
 | Chrome DevTools | Network and console inspection |
 | Git / GitHub | Version control |
-
+ 
 ---
-
+ 
 ## Test Coverage Summary
-
-| Area | Test Cases | Pass | Fail | Blocked | Bugs Found |
+ 
+| Area | Test Cases | Pass | Fail | Blocked / Partial / Deferred | Bugs Found |
 |---|---|---|---|---|---|
 | Bookmark Feature | 8 | 4 | 2 | 2 | 4 (BUG-001 to BUG-004) |
 | Dark Mode | 6 | 5 | 1 | 0 | 4 (BUG-005 to BUG-008) |
@@ -80,12 +79,12 @@ and API endpoint verification.
 | Latest Updates | 5 | 4 | 0 | 1 | 1 (BUG-013) |
 | General App / Navigation | 8 | 6 | 2 | 0 | 3 (BUG-003, BUG-004, BUG-014) |
 | API Testing (Postman) | 7 | 4 | 1 | 2 | 0 |
-| **Total** | **40** | **22** | **8** | **3** | **14** |
-
+| **Total** | **40** | **26** | **9** | **5** | **14** |
+ 
 > Note: BUG-003 and BUG-004 were originally found during feature testing and are also reflected in the General App section. BUG-009 and BUG-010 relate to the Read feature and are not attributed to a separate test section.
-
+ 
 ---
-
+ 
 ## Repository Structure
 ```
 manga-app-qa-testing/
@@ -106,11 +105,11 @@ manga-app-qa-testing/
 └── screenshots/
     └── jira-board.png          
 ```
-
+ 
 ---
-
+ 
 ## Current Progress
-
+ 
 - [x] Test plan written
 - [x] Bookmark test cases complete — 8 cases, 4 pass / 2 fail / 2 blocked
 - [x] Dark mode test cases complete — 6 cases, 5 pass / 1 fail
@@ -120,19 +119,16 @@ manga-app-qa-testing/
 - [x] API tests complete in Postman — 7 cases (4 pass / 1 fail / 2 partial pass)
 - [x] Bug reports documented — 14 bugs (BUG-001 to BUG-014)
 - [x] Jira board set up — 14 bugs logged (KAN-1 to KAN-14)
-- [ ] ISTQB Foundation — in progress
-
 ---
-
+ 
 ## Key Test Scenarios
-
+ 
 ### Bookmark Feature
 - Bookmark a manga and verify it appears in saved list
 - Bookmark the same manga twice — check for duplicates
 - Remove a bookmark — verify immediate removal
 - Verify bookmarks persist after app restart
 - Bookmark with no internet connection
-
 ### Dark Mode
 - Toggle dark mode on — verify full UI switch
 - Toggle off — verify complete revert
@@ -140,19 +136,16 @@ manga-app-qa-testing/
 - Check readability of manga images in dark mode
 - Verify splash screen reflects dark mode setting
 - Toggle dark mode while reading a chapter
-
 ### Search by Genre
 - Select a valid genre — verify relevant results load
 - Select genre with no results — verify empty state message
 - Test with no internet — verify error handling
 - Verify API response matches displayed results
-
 ### Latest Updates
 - Verify latest manga loads on home screen
 - Tap a manga from latest updates — verify correct detail screen opens
 - Test with no internet — verify error handling
 - Verify loading state is visible while fetching
-
 ### General App / Navigation
 - Verify app launches within acceptable time
 - Test back button navigation across all screens
@@ -160,7 +153,6 @@ manga-app-qa-testing/
 - Test tutorial on first launch
 - Verify UI consistency across different screen sizes
 - Test dark mode and bookmark features in combination
-
 ### API Testing
 - Verify MangaVerse API returns 200 OK
 - Test genre filter parameter — verify filtered results
@@ -169,11 +161,10 @@ manga-app-qa-testing/
 - Verify wallpaper API returns valid data
 - Test invalid API key — verify 401/403 response
 - Verify app data matches API response
-
 ---
-
+ 
 ## Bugs by Severity
-
+ 
 | Severity | Count | Bug IDs |
 |---|---|---|
 | Critical | 1 | BUG-009 |
@@ -181,11 +172,11 @@ manga-app-qa-testing/
 | Medium | 3 | BUG-003, BUG-006, BUG-014 |
 | Low | 3 | BUG-008, BUG-011, BUG-013 |
 | **Total** | **14** | |
-
+ 
 ---
-
+ 
 ## About the Developer
-
+ 
 **Amaar Yasir Channa**  
 Mobile Application Development Graduate — Fanshawe College  
 GitHub: [amaar-channa](https://github.com/amaar-channa)  
